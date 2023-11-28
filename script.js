@@ -112,17 +112,17 @@ generate.addEventListener("click", function () {
   let passwordLengthPrompt = prompt(
     "How long would you like your password to be? Please enter a number between 8 and 128"
   );
-
-  //Convert passwordlength to a number?....
-  let passwordLength = parseInt(passwordLengthPrompt);
-
   // If statement for password length
   if (
-    /*passwordLength is not a number || */ passwordLength < 8 ||
-    passwordLength > 128
+    /*passwordLengthPrompt is not a number || */ passwordLengthPrompt < 8 ||
+    passwordLengthPrompt > 128
   ) {
-    prompt("Please enter a valid number between 8 and 128!");
+    alert("Please enter a valid number between 8 and 128!");
     return;
+  } else {
+    //Convert passwordlength to a number?....
+    let passwordlength = parseInt(passwordLengthPrompt);
+    console.log(passwordlength);
   }
 
   //lowercase prompt
@@ -131,29 +131,87 @@ generate.addEventListener("click", function () {
   );
 
   //Validate string - add in more alternatives for yes and no spellings etc. Can you just use "Y" instead of "yes"?
-  let useLowerCase = lowerCasePrompt.toLowerCase() === "y";
+  //let useLowerCase = lowerCasePrompt.toLowerCase() === "y";
+
+  // Or should I do if statements instead? for lowercase prompt
+
+  if (
+    lowerCasePrompt !== "yes" &&
+    lowerCasePrompt !== "Yes" &&
+    lowerCasePrompt !== "y" &&
+    lowerCasePrompt !== "Y" &&
+    lowerCasePrompt !== "no" &&
+    lowerCasePrompt !== "No" &&
+    lowerCasePrompt !== "n" &&
+    lowerCasePrompt !== "N"
+  ) {
+    prompt("Please enter yes or no");
+  } else {
+    lowerCasePrompt = prompt("Please enter yes or no");
+  } //Hmmm still not working. Should I do a while loop?
+
+  console.log(lowerCasePrompt);
 
   //prompt for upper case characters
   let upperCasePrompt = prompt(
     "Would you like your password to contain Uppercase letters? Answer yes or no"
   );
 
-  //Validate string - add in more alternatives for yes and no spellings etc.
-  let useUpperCase = uppercaseCasePrompt.toLowerCase() === "y";
+  if (
+    upperCasePrompt !== "yes" &&
+    upperCasePrompt !== "Yes" &&
+    upperCasePrompt !== "y" &&
+    upperCasePrompt !== "Y" &&
+    upperCasePrompt !== "no" &&
+    upperCasePrompt !== "No" &&
+    upperCasePrompt !== "n" &&
+    upperCasePrompt !== "N"
+  ) {
+    prompt("Please enter yes or no");
+  } else {
+    //log the prompt to upperCasePrompt
+  }
+  console.log(upperCasePrompt);
 
   //number character prompt
   let numbersPrompt = prompt(
     "Would you like your password to contain Numbers? Answer yes or no"
   );
 
-  //Validate string - add in more alternatives for yes and no spellings etc.
-  let useNumbers = numbersPrompt.toLowerCase() === "y";
+  if (
+    numbersPrompt !== "yes" &&
+    numbersPrompt !== "Yes" &&
+    numbersPrompt !== "y" &&
+    numbersPrompt !== "Y" &&
+    numbersPrompt !== "no" &&
+    numbersPrompt !== "No" &&
+    numbersPrompt !== "n" &&
+    numbersPrompt !== "N"
+  ) {
+    prompt("Please enter yes or no");
+  } else {
+    //log the prompt to numbersPrompt
+  }
+  console.log(numbersPrompt);
 
   //Special characters prompt
   let specialCharactersPrompt = prompt(
     "Would you like your password to contain Special characters? Like $!*&. Answer yes or no"
   );
 
-  //Validate string - add in more alternatives for yes and no spellings etc.
-  let useSpecialCharacters = specialCharactersPrompt.toLowerCase() === "y";
+  if (
+    specialCharactersPrompt !== "yes" &&
+    specialCharactersPrompt !== "Yes" &&
+    specialCharactersPrompt !== "y" &&
+    specialCharactersPrompt !== "Y" &&
+    specialCharactersPrompt !== "no" &&
+    specialCharactersPrompt !== "No" &&
+    specialCharactersPrompt !== "n" &&
+    specialCharactersPrompt !== "N"
+  ) {
+    prompt("Please enter yes or no");
+  } else {
+    //log the prompt to lowerCasePrompt
+  }
+  console.log(specialCharactersPrompt);
 });
