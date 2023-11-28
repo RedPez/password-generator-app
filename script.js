@@ -130,8 +130,8 @@ generate.addEventListener("click", function () {
     "Would you like your password to contain Lowercase letters? Answer yes or no"
   );
 
-  //Validate string - add in more alternatives for yes and no spellings etc.
-  let useLowerCase = lowerCasePrompt.toLowerCase() === "yes";
+  //Validate string - add in more alternatives for yes and no spellings etc. Can you just use "Y" instead of "yes"?
+  let useLowerCase = lowerCasePrompt.toLowerCase() === "y";
 
   //prompt for upper case characters
   let upperCasePrompt = prompt(
@@ -139,7 +139,7 @@ generate.addEventListener("click", function () {
   );
 
   //Validate string - add in more alternatives for yes and no spellings etc.
-  let useUpperCase = uppercaseCasePrompt.toLowerCase() === "yes";
+  let useUpperCase = uppercaseCasePrompt.toLowerCase() === "y";
 
   //number character prompt
   let numbersPrompt = prompt(
@@ -147,7 +147,7 @@ generate.addEventListener("click", function () {
   );
 
   //Validate string - add in more alternatives for yes and no spellings etc.
-  let useNumbers = numbersPrompt.toLowerCase() === "yes";
+  let useNumbers = numbersPrompt.toLowerCase() === "y";
 
   //Special characters prompt
   let specialCharactersPrompt = prompt(
@@ -155,5 +155,5 @@ generate.addEventListener("click", function () {
   );
 
   //Validate string - add in more alternatives for yes and no spellings etc.
-  let useSpecialCharacters = specialCharactersPrompt.toLowerCase() === "yes";
+  let useSpecialCharacters = specialCharactersPrompt.toLowerCase() === "y";
 });
