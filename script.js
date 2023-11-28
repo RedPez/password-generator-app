@@ -113,11 +113,11 @@ generate.addEventListener("click", function () {
   );
 
   //i.convert passwordlength to a number?....
+  let passwordLength = parseInt(passwordLengthPrompt);
   //ii. If statement
-
-  //If (password is not a number or < 8 or >128 then ) {
-  //promp("Please enter a valid number between 8 and 128!");
-  //return; }
+  if (passwordLength is not a number || passwordLength < 8 || passwordLength > 128) {
+  prompt("Please enter a valid number between 8 and 128!");
+  }
 
   let lowerCasePrompt = prompt(
     "Would you like your password to contain Lowercase letters? Answer yes or no"
