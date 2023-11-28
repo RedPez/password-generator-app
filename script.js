@@ -108,38 +108,52 @@ var upperCasedCharacters = [
 const generate = document.querySelector("#generate");
 
 generate.addEventListener("click", function () {
+  //password length prompt
   let passwordLengthPrompt = prompt(
     "How long would you like your password to be? Please enter a number between 8 and 128"
   );
 
-  //i.convert passwordlength to a number?....
+  //Convert passwordlength to a number?....
   let passwordLength = parseInt(passwordLengthPrompt);
-  //ii. If statement
-  if (passwordLength is not a number || passwordLength < 8 || passwordLength > 128) {
-  prompt("Please enter a valid number between 8 and 128!");
+
+  // If statement for password length
+  if (
+    /*passwordLength is not a number || */ passwordLength < 8 ||
+    passwordLength > 128
+  ) {
+    prompt("Please enter a valid number between 8 and 128!");
+    return;
   }
 
+  //lowercase prompt
   let lowerCasePrompt = prompt(
     "Would you like your password to contain Lowercase letters? Answer yes or no"
   );
 
-  //i.convert passwordlength to a true/false statement?....
+  //Validate string - add in more alternatives for yes and no spellings etc.
+  let useLowerCase = lowerCasePrompt.toLowerCase() === "yes";
 
-  let uppercaseCasePrompt = prompt(
+  //prompt for upper case characters
+  let upperCasePrompt = prompt(
     "Would you like your password to contain Uppercase letters? Answer yes or no"
   );
 
-  //i.convert passwordlength to a true/false statement?....
+  //Validate string - add in more alternatives for yes and no spellings etc.
+  let useUpperCase = uppercaseCasePrompt.toLowerCase() === "yes";
 
+  //number character prompt
   let numbersPrompt = prompt(
     "Would you like your password to contain Numbers? Answer yes or no"
   );
 
-  //i.convert passwordlength to a true/false statement?....
+  //Validate string - add in more alternatives for yes and no spellings etc.
+  let useNumbers = numbersPrompt.toLowerCase() === "yes";
 
+  //Special characters prompt
   let specialCharactersPrompt = prompt(
     "Would you like your password to contain Special characters? Like $!*&. Answer yes or no"
   );
 
-  //i.convert passwordlength to a true/false statement?....
+  //Validate string - add in more alternatives for yes and no spellings etc.
+  let useSpecialCharacters = specialCharactersPrompt.toLowerCase() === "yes";
 });
